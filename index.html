@@ -4,15 +4,39 @@
   <meta charset="UTF-8">
   <title>PLM-Net: Perception Latency Mitigation Network</title>
   <style>
-    body { font-family: sans-serif; max-width: 1200px; margin: 40px auto; line-height: 1.6; }
+    body {
+      font-family: sans-serif;
+      max-width: 1200px;
+      margin: 40px auto;
+      line-height: 1.6;
+    }
     h1 { color: #2c3e50; }
     a { color: #2980b9; }
+
+    .img-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .img-col {
+      flex: 1;
+      min-width: 48%;
+    }
+
+    .img-col img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      padding: 4px;
+      background: #f9f9f9;
+    }
   </style>
 </head>
 <body>
 
   <h1>PLM-Net: Perception Latency Mitigation Network for Vision-Based Lateral Control of Autonomous Vehicles</h1>
-<!--   <p><strong>Perception Latency Mitigation Network for Vision-Based Lateral Control of Autonomous Vehicles</strong></p> -->
 
   <p><strong>Authors:</strong> Aws Khalil, and Jaerock Kwon</p>
 
@@ -32,22 +56,32 @@
 
   <h2>🖼️ Method Overview</h2>
   <img src="images/method-intro.png" alt="PLM-Net architecture" style="width:100%; max-width:1200px;">
-  
-  <h2>📊 Key Results</h2>
-<!--   <p>Figures and video coming soon.</p> -->
-  
+
   <h2>📊 Evaluation Results</h2>
-  
-  <h3>Random Latency (0 - 350 sec) – Steering</h3>
-  <img src="images/PLM-delta-rand-steering1-v2.png" alt="Steering comparison - random 1" style="width:50%; max-width:800px;">
-  <img src="images/PLM-delta-rand-steering2-v2.png" alt="Steering comparison - random 2" style="width:50%; max-width:800px;">
-  
-  <h3>Random Latency (0 - 350 ms) – Trajectory Plot</h3>
+
+  <h3>Random Latency (0–350 ms) – Steering</h3>
+  <div class="img-row">
+    <div class="img-col">
+      <img src="images/PLM-delta-rand-steering1-v2.png" alt="Steering comparison - random 1">
+    </div>
+    <div class="img-col">
+      <img src="images/PLM-delta-rand-steering2-v2.png" alt="Steering comparison - random 2">
+    </div>
+  </div>
+
+  <h3>Random Latency (0–350 ms) – Trajectory Plot</h3>
   <img src="images/PLM-delta-rand-traj-v2.png" alt="Trajectory plot - random" style="width:100%; max-width:1200px;">
-  
+
   <h3>Fixed Latency (200 ms) – Steering</h3>
-  <img src="images/PLM-delta-200-steering2-v2.png" alt="Steering comparison - 200ms" style="width:50%; max-width:800px;">
-  
+  <div class="img-row">
+    <div class="img-col">
+      <img src="images/PLM-delta-200-steering2-v2.png" alt="Steering comparison - 200ms">
+    </div>
+    <div class="img-col">
+      <!-- Optional: Add second image here if available -->
+    </div>
+  </div>
+
   <h3>Fixed Latency (200 ms) – Trajectory Plot</h3>
   <img src="images/PLM-delta-200-traj-v2.png" alt="Trajectory plot - 200ms" style="width:100%; max-width:1200px;">
 
