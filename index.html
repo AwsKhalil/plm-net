@@ -41,10 +41,14 @@
   <p><strong>Authors:</strong> Aws Khalil, and Jaerock Kwon</p>
 
   <h2>📄 Abstract</h2>
-  <p>This study introduces the Perception Latency Mitigation Network (PLM-Net), a novel deep learning approach for addressing perception latency in vision-based Autonomous Vehicle (AV) lateral control systems. Perception latency is the delay between capturing the environment through vision sensors (e.g., cameras) and applying an action (e.g., steering). 
-    This issue is understudied in both classical and neural-network-based control methods. Reducing this latency with powerful GPUs and FPGAs is possible but impractical for automotive platforms. 
-    PLM-Net consists of two models: the Base Model (BM) and the Timed Action Prediction Model (TAPM). BM represents the original Lane Keeping Assist (LKA) system, while TAPM predicts future actions for different latency values. 
-    By integrating these models, PLM-Net mitigates perception latency. The final output is determined through linear interpolation of BM and TAPM outputs based on real-time latency. 
+  <p>This study introduces the Perception Latency Mitigation Network (PLM-Net), a novel deep learning approach for addressing perception latency in vision-based Autonomous Vehicle (AV) lateral control systems. 
+    Perception latency is the delay between capturing the environment through vision sensors (e.g., cameras) and applying an action (e.g., steering). 
+    This issue is understudied in both classical and neural-network-based control methods. 
+    Reducing this latency with powerful GPUs and FPGAs is possible but impractical for automotive platforms. 
+    PLM-Net consists of two models: the Base Model (BM) and the Timed Action Prediction Model (TAPM). 
+    BM represents the original Lane Keeping Assist (LKA) system, while TAPM predicts future actions for different latency values. 
+    By integrating these models, PLM-Net mitigates perception latency. 
+    The final output is determined through linear interpolation of BM and TAPM outputs based on real-time latency. 
     This design addresses both constant and varying latency, improving driving trajectories and steering control. 
     Experimental results validate the efficacy of PLM-Net across various latency conditions.</p>
 
