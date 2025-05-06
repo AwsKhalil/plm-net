@@ -20,9 +20,14 @@
       margin-bottom: 20px;
     }
 
-    .img-col {
+    .img-col.steering {
       flex: 1;
-      min-width: calc(33.333% - 10px); /* for gap compensation */
+      min-width: 25%;
+    }
+    
+    .img-col.traj {
+      flex: 2;
+      min-width: 50%;
     }
 
     .img-col img {
@@ -68,13 +73,13 @@
 
   <h3>Random Latency (0–350 ms)</h3>
   <div class="img-row">
-    <div class="img-col">
+    <div class="img-col steering">
       <img src="images/PLM-delta-rand-steering1-v2.png" alt="Steering comparison - random 1">
     </div>
-    <div class="img-col">
+    <div class="img-col steering">
       <img src="images/PLM-delta-rand-steering2-v2.png" alt="Steering comparison - random 2">
     </div>
-    <div class="img-col">
+    <div class="img-col traj">
       <img src="images/PLM-delta-rand-traj-v2.png" alt="Trajectory plot - random">
     </div>
   </div>
@@ -84,10 +89,10 @@
  -->
   <h3>Fixed Latency (200 ms)</h3>
   <div class="img-row">
-    <div class="img-col">
+    <div class="img-col steering">
       <img src="images/PLM-delta-200-steering2-v2.png" alt="Steering comparison - 200ms">
     </div>
-    <div class="img-col">
+    <div class="img-col traj">
       <img src="images/PLM-delta-200-traj-v2.png" alt="Trajectory plot - 200ms">
     </div>
     <div class="img-col">
