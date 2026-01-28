@@ -131,7 +131,7 @@
   </div>
   
   <h3>📄 Abstract</h3>
-  <p>This study introduces the Perception Latency Mitigation Network (PLM-Net), a novel deep learning approach for addressing perception latency in vision-based Autonomous Vehicle (AV) lateral control systems. 
+  <!-- <p>This study introduces the Perception Latency Mitigation Network (PLM-Net), a novel deep learning approach for addressing perception latency in vision-based Autonomous Vehicle (AV) lateral control systems. 
     Perception latency is the delay between capturing the environment through vision sensors (e.g., cameras) and applying an action (e.g., steering). 
     This issue is understudied in both classical and neural-network-based control methods. 
     Reducing this latency with powerful GPUs and FPGAs is possible but impractical for automotive platforms. 
@@ -140,7 +140,14 @@
     By integrating these models, PLM-Net mitigates perception latency. 
     The final output is determined through linear interpolation of BM and TAPM outputs based on real-time latency. 
     This design addresses both constant and varying latency, improving driving trajectories and steering control. 
-    Experimental results validate the efficacy of PLM-Net across various latency conditions.</p>
+    Experimental results validate the efficacy of PLM-Net across various latency conditions.</p> -->
+  <p>This study introduces the Perception Latency Mitigation Network (PLM-Net), a deep learning framework designed to address perception latency in vision-based lateral control of Autonomous Vehicles (AVs). 
+    Perception latency, defined as the delay between sensing the environment through vision sensors (e.g., cameras) and executing a control action (e.g., steering), can degrade steering stability and lead to inaccurate lateral control. 
+    This issue remains understudied in both classical and neural-network-based control methods. Rather than reducing latency itself, PLM-Net mitigates its effect on control performance. 
+    The framework comprises two models: the Base Model (BM), representing the existing lane-keeping assist controller, and the Timed Action Prediction Model (TAPM), which forecasts future steering actions under different latency conditions. 
+    By interpolating the outputs of BM and TAPM according to the real-time latency value, PLM-Net adaptively compensates both constant and time-varying delays without modifying the original control pipeline. 
+    Experimental evaluations in a closed-loop simulation show that PLM-Net improves steering accuracy and trajectory stability under multiple latency settings, achieving up to 62% and 78% reductions in Mean Absolute Error (MAE) for constant and variable-latency cases, respectively.
+  </p>
   
   <h3>🖼️ Method Overview</h3>
   <img src="images/method-intro.png" alt="PLM-Net architecture" style="width:auto; max-width:100%;">
